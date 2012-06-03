@@ -28,6 +28,7 @@
 #include "dht11.h"
 
 #define DEBUG	//open debug message
+
 #ifdef DEBUG
 #define PRINTK(fmt, arg...)		printk(KERN_WARNING fmt, ##arg)
 #else
@@ -38,7 +39,7 @@
 
 
 
-static char DHT11ReadByte(void)
+static unsigned char DHT11ReadByte(void)
 {
 	int time, i;
 	unsigned char data;
@@ -69,20 +70,20 @@ static char DHT11ReadByte(void)
 			udelay(5);
 		}
 	
-		data >>= 1;
-		if (time >= 8)
+		data <<= 1;
+		if (time > 6)
 		{
-			data |= 0x80;
+			data |= 0x01;
 		}
 	}
 
-	return ((char)data);
+	return (data);
 }
 
 static ssize_t  DHT11Read(struct file *filp, char *buff, size_t count, loff_t *f_pos)
 {
 	int time, i;
-	char data[5];
+	unsigned char data[5];
 	char sum;
 
 	if (count > 5 || buff == NULL)
@@ -92,16 +93,17 @@ static ssize_t  DHT11Read(struct file *filp, char *buff, size_t count, loff_t *f
 
 	s3c_gpio_cfgpin(S3C64XX_GPP(1), S3C_GPIO_SFN(1));  //set output
 	gpio_set_value(S3C64XX_GPP(1), 0);    
-	msleep(18);
+	msleep(16);
+//	mdelay(18);
 	gpio_set_value(S3C64XX_GPP(1), 1);    
-	udelay(45);
+	udelay(40);
 	s3c_gpio_cfgpin(S3C64XX_GPP(1), S3C_GPIO_SFN(0));  //set input
 	
 	time = 0;
 	while ((!(gpio_get_value(S3C64XX_GPP(1)))))
 	{
 		time++;
-		if (time > 30)
+		if (time > 200)
 		{
 			return -1;
 		}
@@ -112,7 +114,7 @@ static ssize_t  DHT11Read(struct file *filp, char *buff, size_t count, loff_t *f
 	while ((gpio_get_value(S3C64XX_GPP(1))))
 	{
 		time++;
-		if (time > 30)
+		if (time > 100)
 		{
 			return -2;
 		}
@@ -142,7 +144,7 @@ static ssize_t  DHT11Read(struct file *filp, char *buff, size_t count, loff_t *f
 	s3c_gpio_cfgpin(S3C64XX_GPP(1), S3C_GPIO_SFN(1));  //set output
 	gpio_set_value(S3C64XX_GPP(1), 1);    
 
-	copy_to_user(buff, data, count);
+	copy_to_user(buff, (char *)data, count);
 
 	return count;
 }

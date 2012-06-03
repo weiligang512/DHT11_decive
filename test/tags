@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BaudRate	type.h	/^	uint16 BaudRate;$/;"	m	struct:__anon4	access:public
+CROSS	Makefile	/^CROSS = arm-linux-gcc$/;"	m
+DHT11Close	DHT11User.c	/^void DHT11Close(void)$/;"	f	signature:(void)
+DHT11Close	DHT11User.h	/^void DHT11Close(void);$/;"	p	signature:(void)
+DHT11DEV	DHT11User.h	15;"	d
+DHT11Init	DHT11User.c	/^void DHT11Init(void)$/;"	f	signature:(void)
+DHT11Init	DHT11User.h	/^void DHT11Init(void);$/;"	p	signature:(void)
+DHT11Read	DHT11User.c	/^int DHT11Read(char *Data)$/;"	f	signature:(char *Data)
+FALSE	type.h	/^	FALSE = 0$/;"	e	enum:__anon5
+FLAGS	Makefile	/^FLAGS = -Wall$/;"	m
+FrameOK	type.h	/^	unsigned char FrameOK;$/;"	m	struct:__anon2	access:public
+FrameOK	type.h	/^	unsigned char FrameOK;$/;"	m	struct:__anon3	access:public
+IIrData_Typ	type.h	/^}IIrData_Typ;$/;"	t	typeref:struct:__anon3
+INC	Makefile	/^INC = DHT11User.h$/;"	m
+IrData	type.h	/^	IrData_u  IrData;$/;"	m	struct:__anon2	access:public
+IrData_Typ	type.h	/^}IrData_Typ;$/;"	t	typeref:struct:__anon2
+IrData_u	type.h	/^}IrData_u;$/;"	t	typeref:union:__anon1
+OBJ	Makefile	/^OBJ = DHT11User.o$/;"	m
+SRC	Makefile	/^SRC = DHT11User.c$/;"	m
+SysParameter_Tyep	type.h	/^}SysParameter_Tyep;$/;"	t	typeref:struct:__anon4
+SysUID	type.h	/^	uint16 SysUID;$/;"	m	struct:__anon4	access:public
+TRUE	type.h	/^	TRUE = !0,$/;"	e	enum:__anon5
+__DHT11_H__	DHT11User.h	13;"	d
+__TYPE_H__	type.h	2;"	d
+__anon1::ucIrData	type.h	/^	unsigned char ucIrData[17];$/;"	m	union:__anon1	access:public
+__anon1::ulIrData	type.h	/^	unsigned long ulIrData; $/;"	m	union:__anon1	access:public
+__anon2::FrameOK	type.h	/^	unsigned char FrameOK;$/;"	m	struct:__anon2	access:public
+__anon2::IrData	type.h	/^	IrData_u  IrData;$/;"	m	struct:__anon2	access:public
+__anon3::FrameOK	type.h	/^	unsigned char FrameOK;$/;"	m	struct:__anon3	access:public
+__anon3::uiIrData	type.h	/^	unsigned int uiIrData[140];$/;"	m	struct:__anon3	access:public
+__anon3::uiIrHeard	type.h	/^	unsigned int uiIrHeard[2];$/;"	m	struct:__anon3	access:public
+__anon4::BaudRate	type.h	/^	uint16 BaudRate;$/;"	m	struct:__anon4	access:public
+__anon4::SysUID	type.h	/^	uint16 SysUID;$/;"	m	struct:__anon4	access:public
+bool	type.h	/^}bool;$/;"	t	typeref:enum:__anon5
+fd	DHT11User.c	/^static int fd;$/;"	v	file:
+int16	type.h	/^typedef int  int16;$/;"	t
+int32	type.h	/^typedef long int32;$/;"	t
+int8	type.h	/^typedef char int8;$/;"	t
+main	DHT11User.c	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+ucIrData	type.h	/^	unsigned char ucIrData[17];$/;"	m	union:__anon1	access:public
+uiIrData	type.h	/^	unsigned int uiIrData[140];$/;"	m	struct:__anon3	access:public
+uiIrHeard	type.h	/^	unsigned int uiIrHeard[2];$/;"	m	struct:__anon3	access:public
+uint16	type.h	/^typedef unsigned int  uint16;$/;"	t
+uint32	type.h	/^typedef unsigned long uint32;$/;"	t
+uint8	type.h	/^typedef unsigned char uint8;$/;"	t
+ulIrData	type.h	/^	unsigned long ulIrData; $/;"	m	union:__anon1	access:public
+vuint16	type.h	/^typedef volatile unsigned int  vuint16;$/;"	t
+vuint32	type.h	/^typedef volatile unsigned long vuint32;$/;"	t
+vuint8	type.h	/^typedef volatile unsigned char vuint8;$/;"	t
