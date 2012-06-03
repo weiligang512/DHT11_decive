@@ -1,0 +1,1 @@
+cmd_/home/zhouligen/ok6410/DemoTest/DHT11-moudle/newmodule/dht11.ko := arm-linux-ld -EL -r  -T /home/zhouligen/ok6410/linux-3.0.1/scripts/module-common.lds --build-id  -o /home/zhouligen/ok6410/DemoTest/DHT11-moudle/newmodule/dht11.ko /home/zhouligen/ok6410/DemoTest/DHT11-moudle/newmodule/dht11.o /home/zhouligen/ok6410/DemoTest/DHT11-moudle/newmodule/dht11.mod.o

@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DEBUG	dht11.c	30;"	d	file:
+DEVICE_NAME	dht11.c	37;"	d	file:
+DHT11Read	dht11.c	/^static ssize_t  DHT11Read(struct file *filp, char *buff, size_t count, loff_t *f_pos)$/;"	f	file:	signature:(struct file *filp, char *buff, size_t count, loff_t *f_pos)
+DHT11ReadByte	dht11.c	/^static char DHT11ReadByte(void)$/;"	f	file:	signature:(void)
+DHT11_Init	dht11.c	/^module_init(DHT11_Init);$/;"	v
+DHT11_Init	dht11.c	/^static int __init DHT11_Init(void)$/;"	f	file:	signature:(void)
+DHT11_exit	dht11.c	/^module_exit(DHT11_exit);$/;"	v
+DHT11_exit	dht11.c	/^static void __exit DHT11_exit(void)$/;"	f	file:	signature:(void)
+KERNELDIR	Makefile	/^KERNELDIR := \/home\/zhouligen\/ok6410\/linux-3.0.1$/;"	m
+PRINTK	dht11.c	32;"	d	file:
+PRINTK	dht11.c	34;"	d	file:
+__DHT11_H__	dht11.h	13;"	d
+dev_fops	dht11.c	/^static struct file_operations dev_fops = $/;"	v	typeref:struct:file_operations	file:
+misc	dht11.c	/^static struct miscdevice misc = {$/;"	v	typeref:struct:miscdevice	file:
+obj-m	Makefile	/^obj-m := dht11.o$/;"	m
